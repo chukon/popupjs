@@ -1,4 +1,19 @@
- $( function() {
+var message;
+window.onload = function() {
+const fs = require('fs') 
+// Reading data in utf-8 format 
+// which is a type of character set. 
+// Instead of 'utf-8' it can be  
+// other character set also like 'ascii' 
+fs.readFile('notification.txt', 'utf-8', (err, data) => { 
+    if (err) throw err; 
+    // Converting Raw Buffer to text 
+    // data using tostring function. 
+    message = data; 
+}) 
+};
+
+$( function() {
     $( "#dialog-message" ).dialog({
       modal: true,
       buttons: {
@@ -9,14 +24,3 @@
     });
   } );
 
-document.getElementById('inputfile') 
-            .addEventListener('change', function() { 
-              
-            var fr=new FileReader(); 
-            fr.onload=function(){ 
-                document.getElementById('output') 
-                        .textContent=fr.result; 
-            } 
-              
-            fr.readAsText(this.files[0]); 
-}) 
