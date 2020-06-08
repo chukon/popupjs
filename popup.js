@@ -10,6 +10,3 @@ http.createServer(function (req, res) {
   });
 }).listen(80);
 };
-
-//document.getElementById("notification").innerHTML = message;
-
