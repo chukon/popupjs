@@ -1,6 +1,6 @@
 jQuery.get('notification.txt', function(data) {
     alert(data);
-    $( "#dialog-box" ).dialog({
+    $( "#notif" ).dialog({
             width: "auto",
             height: "auto",
         });
