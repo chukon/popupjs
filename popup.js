@@ -1,5 +1,11 @@
 window.onload = function(){
-var fs = require('fs');
-var text = fs.readFileSync('notification.txt', 'utf8');
-alert(text);
+const fs = require('fs')
+fs.readFile('notification.txt', (err, data) => {
+  if (err) {
+    alert(err)
+    return
+  }
+ alert(data)
+})
 };
+
