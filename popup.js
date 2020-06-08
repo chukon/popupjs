@@ -1,7 +1,12 @@
 jQuery.get('notification.txt', function(data) {
     alert(data);
-    $( "#notif" ).dialog({
-            width: "auto",
-            height: "auto",
-        });
+    if (date != ""){
+        var createDialog = function(data , "1-Minute Guide") {
+         var dialog =  "<div id=dialog <h1>" + data + "</h1></div>";
+        $('body').append(dialog);
+        $('#dialog').prop('title' , title);
+         $('#dialog').dialog();
+         }
+    }
 });
+
