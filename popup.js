@@ -4,8 +4,7 @@
         if (data.length > 3){
         var notifs = data;
         var Titles = "1-Minute Guide";
-        alert(checkCookie());
-        if (checkCookie() == false)
+        if (checkCookie() == 0)
         {
            createDialog(notifs , Titles);
         }
