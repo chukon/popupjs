@@ -28,11 +28,12 @@ var createDialog = function(text , title) {
 function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
- alert(notif);
     if(notif != "") {
       return true;
+      alert("true");
     } else {
       return false;    
+       alert("false");
       setCookie("notification","notif", 2);
     }
 }
