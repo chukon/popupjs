@@ -1,10 +1,22 @@
 jQuery.get('notification.txt', function(data) {
     alert(data);
-        var createDialog = function(data , '1-Minute Guide') {
-         var dialog =  "<div id=dialog <h1>" + data + "</h1></div>";
-        $('body').append(dialog);
-        $('#dialog').prop('title' , '1-Minute Guide');
-         $('#dialog').dialog();
-         }
+    // initialize title and body variables
+var someVariable = data;
+var someTitle = "1-Minute Guide";
+createDialog(someVariable , someTitle);
 });
+
+var createDialog = function(text , title) {
+    //create dialog <div> shell
+    var dialog =  "<div id=dialog <h1>" + text + "</h1></div>";
+    
+    // create the dialog <div>
+    $('body').append(dialog);
+    
+    // update the <div>'s title
+    $('#dialog').prop('title' , title);
+    
+    //create the dialog
+    $('#dialog').dialog();
+}
 
