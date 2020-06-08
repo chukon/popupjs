@@ -1,7 +1,7 @@
 jQuery.get('notification.txt', function(data) {
-//alert(data);
+alert(data.length);
     // initialize title and body variables
-if (data.val()){
+if (data.length > 0){
 var notif = data;
 var Title = "1-Minute Guide";
 createDialog(notif , Title);
