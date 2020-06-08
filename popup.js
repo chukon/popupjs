@@ -10,7 +10,8 @@ fs.readFile('notification.txt', 'utf-8', (err, data) => {
     // Converting Raw Buffer to text 
     // data using tostring function. 
     message = data; 
-    document.getElementById("notification").innerHTML = message;
 }) 
 };
+
+document.getElementById("notification").innerHTML = message;
 
