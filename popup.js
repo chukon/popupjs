@@ -1,11 +1,10 @@
 window.onload = function(){
-const fs = require('fs')
-fs.readFile('notification.txt', (err, data) => {
-  if (err) {
-    alert(err)
-    return
-  }
- alert(data)
-})
+var fs = require('fs');
+ 
+fs.readFile('notification.txt', 'utf8', function(err, contents) {
+    console.log(contents);
+});
+ 
+console.log('after calling readFile');
 };
 
