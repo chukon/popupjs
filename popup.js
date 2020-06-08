@@ -1,5 +1,5 @@
 jQuery.get('notification.txt', function(data) {
-alert(data.length);
+//alert(data.length);
     // initialize title and body variables
 if (data.length > 0){
 var notif = data;
