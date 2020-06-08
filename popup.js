@@ -29,12 +29,12 @@ function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
     if(notif != "") {
-      return true;
       alert("true");
+      return true;
     } else {
-      return false;    
-       alert("false");
+      alert("false");
       setCookie("notification","notif", 2);
+      return false;    
     }
 }
 function getCookie(cname) {
