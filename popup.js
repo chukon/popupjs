@@ -2,11 +2,11 @@
          //alert(data.length);
           // initialize title and body variables
         if (data.length > 3){
-        var notif = data;
+        var notifs = data;
         var Title = "1-Minute Guide";
         if (checkCookie() == false)
         {
-           createDialog(notif , Title);
+           createDialog(notifs , Title);
         }
 }
 });
