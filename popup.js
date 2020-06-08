@@ -1,4 +1,3 @@
-var message;
 window.onload = function() {
 const fs = require('fs'); 
 // Reading data in utf-8 format 
