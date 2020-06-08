@@ -1,16 +1,14 @@
 window.onload = function() {
-const fs = require('fs'); 
-// Reading data in utf-8 format 
-// which is a type of character set. 
-// Instead of 'utf-8' it can be  
-// other character set also like 'ascii' 
-fs.readFile('notification.txt', 'utf-8', (err, data) => { 
-    if (err) throw err; 
-    // Converting Raw Buffer to text 
-    // data using tostring function. 
-    message = data; 
-    alert(data);
-}) 
+var http = require('http');
+var fs = require('fs');
+http.createServer(function (req, res) {
+  //Open a file on the server and return its content:
+  fs.readFile('notification.txt', function(err, data) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write(data);
+    return res.end();
+  });
+}).listen(80);
 };
 
 //document.getElementById("notification").innerHTML = message;
