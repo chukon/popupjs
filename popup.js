@@ -28,6 +28,7 @@ var createDialog = function(text , title) {
 function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
+ alert(notif);
     if(notif != "") {
       return true;
     } else {
