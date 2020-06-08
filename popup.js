@@ -29,9 +29,9 @@ function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
     if(notif != "") {
-      return = true;
+      return true;
     } else {
-      return = false;    
+      return false;    
       var date = new Date();
       date.setTime(date.getTime() + (30 * 1000));
       setCookie("notification","notif", date);
