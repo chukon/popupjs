@@ -14,5 +14,5 @@ fs.readFile('notification.txt', 'utf-8', (err, data) => {
 }) 
 };
 
-document.getElementById("notification").innerHTML = message;
+//document.getElementById("notification").innerHTML = message;
 
