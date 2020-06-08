@@ -10,17 +10,7 @@ fs.readFile('notification.txt', 'utf-8', (err, data) => {
     // Converting Raw Buffer to text 
     // data using tostring function. 
     message = data; 
+    document.getElementById("notification").innerHTML = $( "#dialog-message" ).dialog({modal: true,buttons: {Ok: function() {$( this ).dialog( "close" );}}});
 }) 
 };
-
-$( function() {
-    $( "#dialog-message" ).dialog({
-      modal: true,
-      buttons: {
-        Ok: function() {
-          $( this ).dialog( "close" );
-        }
-      }
-    });
-  } );
 
