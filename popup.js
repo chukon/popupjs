@@ -1,6 +1,6 @@
 jQuery.get('notification.txt', function(data) {
     alert(data);
-    if (data != ''){
+    if (data.toString() != ""){
         var createDialog = function(data , "1-Minute Guide") {
          var dialog =  "<div id=dialog <h1>" + data + "</h1></div>";
         $('body').append(dialog);
