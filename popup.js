@@ -4,7 +4,7 @@
         if (data.length > 3){
         var notifs = data;
         var Titles = "1-Minute Guide";
-        if (checkCookie() == 0)
+        if (checkCookie())
         {
            createDialog(notifs , Titles);
         }
@@ -29,12 +29,10 @@ function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
     if(notif != "") {
-      alert("true");
-      return true;
+      return false;
     } else {
-      alert("false");
       setCookie("notification","notif", 2);
-      return false;    
+      return true;    
     }
 }
 function getCookie(cname) {
