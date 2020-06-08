@@ -3,10 +3,11 @@
           // initialize title and body variables
         if (data.length > 3){
         var notifs = data;
-        var Title = "1-Minute Guide";
+        var Titles = "1-Minute Guide";
+        alert(checkCookie());
         if (checkCookie() == false)
         {
-           createDialog(notifs , Title);
+           createDialog(notifs , Titles);
         }
 }
 });
