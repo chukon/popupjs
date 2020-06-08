@@ -1,6 +1,6 @@
 var message;
 window.onload = function() {
-const fs = require('fs') 
+const fs = require('fs'); 
 // Reading data in utf-8 format 
 // which is a type of character set. 
 // Instead of 'utf-8' it can be  
