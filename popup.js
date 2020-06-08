@@ -34,7 +34,7 @@ function checkCookie() {
       return = false;    
       var date = new Date();
       date.setTime(date.getTime() + (30 * 1000));
-      setCookie("notif","notif", date);
+      setCookie("notification","notif", date);
     }
 }
 
