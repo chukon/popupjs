@@ -1,3 +1,23 @@
+const getUA = () => {
+    let device = "Unknown";
+    const ua = {
+        "Generic Linux": /Linux/i,
+        "Android": /Android/i,
+        "BlackBerry": /BlackBerry/i,
+        "Bluebird": /EF500/i,
+        "Chrome OS": /CrOS/i,
+        "Datalogic": /DL-AXIS/i,
+        "Honeywell": /CT50/i,
+        "iPad": /iPad/i,
+        "iPhone": /iPhone/i,
+        "iPod": /iPod/i,
+        "macOS": /Macintosh/i,
+        "Windows": /IEMobile|Windows/i,
+        "Zebra": /TC70|TC55/i,
+    }
+    Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
+    return device;
+}
 alert(getUA()); 
 jQuery.get('notification.txt', function(data) {
          //alert(data.length);
@@ -60,24 +80,5 @@ function setCookie(cname, cvalue, exdays) {
 function delete_cookie(name) {
   document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
-const getUA = () => {
-    let device = "Unknown";
-    const ua = {
-        "Generic Linux": /Linux/i,
-        "Android": /Android/i,
-        "BlackBerry": /BlackBerry/i,
-        "Bluebird": /EF500/i,
-        "Chrome OS": /CrOS/i,
-        "Datalogic": /DL-AXIS/i,
-        "Honeywell": /CT50/i,
-        "iPad": /iPad/i,
-        "iPhone": /iPhone/i,
-        "iPod": /iPod/i,
-        "macOS": /Macintosh/i,
-        "Windows": /IEMobile|Windows/i,
-        "Zebra": /TC70|TC55/i,
-    }
-    Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
-    return device;
-}
+
 
