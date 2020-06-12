@@ -29,10 +29,10 @@ function checkCookie() {
     // Get cookie using our custom function
     var notif = getCookie("notification");
     if(notif != "") {
-      return false;
+      return true;
     } else {
       setCookie("notification","notif", 2);
-      return true;    
+      return false;    
     }
 }
 function getCookie(cname) {
