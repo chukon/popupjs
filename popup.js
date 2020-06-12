@@ -4,10 +4,10 @@
         if (data.length > 3){
         var notifs = data;
         var Titles = "1-Minute Guide";
-        if (checkCookie())
-        {
+       // if (checkCookie())
+       // {
            createDialog(notifs , Titles);
-        }
+       // }
 }
 });
 
